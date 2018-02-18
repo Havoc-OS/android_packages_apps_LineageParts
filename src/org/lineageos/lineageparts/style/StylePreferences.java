@@ -264,7 +264,7 @@ public class StylePreferences extends SettingsPreferenceFragment {
         // selection dialog to be dismissed gracefully
         new Handler().postDelayed(() -> mInterface.setGlobalStyle(value, mPackageName), 500);
 
-        setStyleIcon(value);
+        setupStylePref();
         return true;
     }
 
