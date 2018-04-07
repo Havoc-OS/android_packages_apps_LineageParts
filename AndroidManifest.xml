@@ -65,6 +65,17 @@
                 android:value="org.lineageos.lineageparts.PartsUpdater" />
         </activity>
 
+        <activity android:name=".trust.TrustOnBoardingActivity"
+            android:label="@string/trust_title"
+            android:theme="@style/OnBoardingStyle"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter android:priority="-4">
+                <action android:name="org.lineageos.lineageparts.TRUST_HINT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".BootReceiver" android:enabled="true">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -210,6 +221,18 @@
                 android:resource="@string/style_summary" />
         </activity-alias> -->
 
+        <!-- Trust interface (Security category) -->
+        <activity-alias
+            android:name=".trust.TrustPreferences"
+            android:label="@string/trust_title"
+            android:targetActivity="PartsActivity">
+            <intent-filter android:priority="-4">
+                <action android:name="org.lineageos.lineageparts.action.SETTINGS" />
+                <action android:name="org.lineageos.lineageparts.TRUST_INTERFACE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
         <!-- Expanded Desktop settings (Display category)
         <activity-alias
             android:name=".applications.ExpandedDesktopSettings"
@@ -237,7 +260,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="org.lineageos.lineageparts.action.TRIGGER_REPORT_METRICS" />
             </intent-filter>
-        </receiver> -->
+        </receiver> 
 
         <service android:label="ReportingService"
             android:enabled="true"
@@ -251,7 +274,7 @@
         <service android:name=".lineagestats.ReportingService"
                  android:label="ReportingService"
                  android:enabled="true"
-                 android:exported="false" />
+                 android:exported="false" />-->
 
         <!-- Weather settings -->
         <activity-alias
