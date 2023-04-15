@@ -232,7 +232,7 @@
         </activity-alias>
 
         <!-- Contributors Cloud (MyDeviceInfo category) -->
-        <activity-alias
+        <!--<activity-alias
             android:name=".contributors.ContributorsCloudFragment"
             android:exported="true"
             android:label="@string/contributors_cloud_fragment_title"
@@ -255,7 +255,7 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/summary_empty" />
-        </activity-alias>
+        </activity-alias>-->
 
         <!-- Anonymous Statistics -->
         <receiver
