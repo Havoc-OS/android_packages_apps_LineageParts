@@ -43,6 +43,7 @@ android_app {
         "org.lineageos.platform.internal",
         "SystemUISharedLib",
         "LineagePreferenceLib",
+        "VendorSupport-preference",
     ],
 
     required: [
